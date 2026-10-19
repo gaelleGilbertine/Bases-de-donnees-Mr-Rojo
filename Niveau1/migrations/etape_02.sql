@@ -21,3 +21,4 @@ UPDATE plat SET id_categorie = 3 WHERE id = 5;
 UPDATE plat SET id_categorie = 4 WHERE id = 6;
 UPDATE plat SET id_categorie = 5 WHERE id = 7;
 ALTER COLUMN id_categorie SET NOT NULL;
+ALTER TABLE plat ADD FOREIGN KEY (id_categorie) REFERENCES categorie(id_categorie);

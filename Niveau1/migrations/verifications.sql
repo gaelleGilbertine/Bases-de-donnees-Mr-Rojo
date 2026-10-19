@@ -8,3 +8,9 @@ SELECT * FROM plat ORDER BY prix DESC;
 --nombre de plats par catégorie, y compris les catégories sans plat
 SELECT COUNT(plat.id), categorie.nom FROM categorie LEFT JOIN plat on plat.id_categorie = categorie.id_categorie GROUP BY categorie.nom ;
 -- on ajoute pas juste categorie VARCHAR(50) dans la table des plats car ca pourrait entrainer des erreur de calcule. par exemple si dans categorie il y a une faute de frappe comme plat malagasy et l'autre plat malgache ca pourait fausser le resultat si je veux connaitre le nombre de plat dans la categorie plat malgache
+
+
+-- ETAPE 3
+--montant total de chaque commande
+SELECT SUM(plat.prix * quantite), id_commande FROM ligne_commande JOIN plat on plat.id = ligne_commande.id_plat GROUP BY id_commande;
+--je place la quantite dans ligne_commande

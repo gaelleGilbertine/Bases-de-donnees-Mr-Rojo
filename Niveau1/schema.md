@@ -19,5 +19,19 @@ PLAT (modifie)
      **id_plat**,
     nom,
     prix,
-    id_categorie
+    #id_categorie
+)
+
+## Etape 3 : Les commandes
+COMMANDE(nouveau)
+(
+    **id_commande**
+)
+
+LIGNE_COMMANDE (nouveau)
+(
+    #**id_commande**
+    #**id_plat**
+    date
+    quantite
 )
