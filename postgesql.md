@@ -803,4 +803,23 @@ Ajouter une description à une table :
 COMMENT ON TABLE plat IS 'Liste des plats du restaurant';
 ```
 
+### remplacer le valeur NULL
+1. COALESCE
+```bash
+SELECT commande.id_commande,
+       COALESCE(client.nom, 'client de passage') AS nom_client
+FROM commande
+LEFT JOIN client ON commande.id_client = client.id_client;
+```
+
+2. CASE WHEN
+```bash
+SELECT commande.id_commande,
+       CASE
+           WHEN client.nom IS NULL THEN 'client de passage'
+           ELSE client.nom
+       END AS nom_client
+FROM commande
+LEFT JOIN client ON commande.id_client = client.id_client;
+```
 

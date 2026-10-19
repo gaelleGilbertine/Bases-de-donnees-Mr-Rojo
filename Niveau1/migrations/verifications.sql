@@ -14,3 +14,9 @@ SELECT COUNT(plat.id), categorie.nom FROM categorie LEFT JOIN plat on plat.id_ca
 --montant total de chaque commande
 SELECT SUM(plat.prix * quantite), id_commande FROM ligne_commande JOIN plat on plat.id = ligne_commande.id_plat GROUP BY id_commande;
 --je place la quantite dans ligne_commande
+
+
+-- ETAPE 4
+-- liste des commandes avec le nom du client, en affichant « client de passage » quand il n'y en a pas.
+SELECT id_commande, COALESCE(clients.nom, 'client de passage') FROM commande LEFT JOIN clients on commande.id_client = clients.id_client ;
+--oui ma cle etrangere est NOT NULL. pour ne perdre aucune commande il faut la jointure LEFT JOIN

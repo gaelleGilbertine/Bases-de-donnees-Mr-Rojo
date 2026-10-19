@@ -30,8 +30,21 @@ COMMANDE(nouveau)
 
 LIGNE_COMMANDE (nouveau)
 (
-    #**id_commande**
-    #**id_plat**
-    date
+    #**id_commande**,
+    #**id_plat**,
+    date,
     quantite
+)
+
+## Etape 4 : Les habitués
+CLIENT(nouveau)
+(
+    **id_client**,
+    nom?
+)
+
+COMMANDE(modifie)
+(
+    **id_commande**
+    #id_client
 )
