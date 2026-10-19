@@ -19,3 +19,6 @@ AS payement ON commande.id_commande = payement.id_commande;
 -- pour CHECK pour ajouter un nouveau mode de paiement, il faut modifier la contrainte. pour la table de reference facile d'ajouter, de supprimer ou de gérer les modes de paiement sans modifier la structure de la table des paiements. donc il vaux mieux utiliser la table de reference
 
 
+--ETAPE 7
+-- je consate que le montant du commande 1 a changer lorsqu'on a modifier le prix du'un plat
+
