@@ -45,6 +45,27 @@ CLIENT(nouveau)
 
 COMMANDE(modifie)
 (
-    **id_commande**
+    **id_commande**,
     #id_client
+)
+
+## Etape 5: Serveurs et tables
+SERVEUR(nouveau)
+(
+    **id_serveur**,
+    nom
+
+)
+
+TABLE(nouveau)
+(
+    **id_table**
+)
+
+COMMANDE(modifie)
+(
+    **id_commande**,
+    #id_client,
+    #id_serveur,
+    #id_table?
 )
