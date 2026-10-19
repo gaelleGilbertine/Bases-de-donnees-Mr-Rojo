@@ -7,3 +7,17 @@ PLAT (nouveau)
     prix
 )
 
+## Etape 2:  Les catégories
+CATEGORIE (nouveau)
+(
+    **id_categorie**,
+    nom
+)
+
+PLAT (modifie)
+(
+     **id_plat**,
+    nom,
+    prix,
+    id_categorie
+)
