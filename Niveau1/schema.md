@@ -1,4 +1,4 @@
-# schema relationnel mis a jour
+# schema relationnel mis a jour (niveau 1)
 ## Etape 1: La carte
 PLAT (nouveau)
 (
